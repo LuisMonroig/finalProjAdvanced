@@ -42,7 +42,7 @@ namespace PillIdentifier
 
             else
             {
-
+                MessageBox.Show("Information incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
