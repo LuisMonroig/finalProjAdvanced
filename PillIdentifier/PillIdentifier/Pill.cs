@@ -4,6 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+* Filename: Pill.cs
+* Author: Ricardo J. Ramirez Santiago
+* Description: describes the information of a pill
+* History:
+*           5/10/2020 - File created and class attributes defined. RRS
+*/
+
 namespace PillIdentifier
 {
     class Pill: IPill
