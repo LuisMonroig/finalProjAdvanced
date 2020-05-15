@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,6 +55,7 @@
     </Compile>
     <Compile Include="IPill.cs" />
     <Compile Include="Pill.cs" />
+    <Compile Include="PillDB.cs" />
     <Compile Include="PillForm.cs">
       <SubType>Form</SubType>
     </Compile>
