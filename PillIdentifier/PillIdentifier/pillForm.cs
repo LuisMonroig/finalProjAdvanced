@@ -27,7 +27,47 @@ namespace PillIdentifier
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("made by two cool guys");
+            string infoMessage = "Made by:\n" +
+                "Ricardo Ramirez Santiago #119372\n" +
+                "Luis Monroig";
+
+            MessageBox.Show(infoMessage, "About", MessageBoxButtons.OK);
+        }
+
+        private void addPillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddPillForm addForm = new AddPillForm(this);
+            addForm.Show();
+            this.Hide();
+        }
+
+        private void PillForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void modifyPillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            searchPillForm searchForm = new searchPillForm(this, SearchType.SearchAndModify);
+            searchForm.Show();
+        }
+
+        private void IdentifyPillToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            searchPillForm searchForm = new searchPillForm(this, SearchType.SearchAndIdentify);
+            searchForm.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pillReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PillReportForm reportForm = new PillReportForm(this);
+            reportForm.Show();
+            this.Hide();
         }
     }
 }

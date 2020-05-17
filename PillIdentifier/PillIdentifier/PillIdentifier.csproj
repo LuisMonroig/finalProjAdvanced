@@ -47,6 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPillForm.Designer.cs">
+      <DependentUpon>AddPillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PillReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PillReportForm.Designer.cs">
+      <DependentUpon>PillReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchType.cs" />
     <Compile Include="loginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +67,12 @@
       <DependentUpon>loginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="IPill.cs" />
+    <Compile Include="ModifyPillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyPillForm.Designer.cs">
+      <DependentUpon>ModifyPillForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pill.cs" />
     <Compile Include="PillDB.cs" />
     <Compile Include="PillForm.cs">
@@ -64,11 +83,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchPillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchPillForm.Designer.cs">
+      <DependentUpon>searchPillForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddPillForm.resx">
+      <DependentUpon>AddPillForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModifyPillForm.resx">
+      <DependentUpon>ModifyPillForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PillForm.resx">
       <DependentUpon>PillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PillReportForm.resx">
+      <DependentUpon>PillReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,6 +113,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="searchPillForm.resx">
+      <DependentUpon>searchPillForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

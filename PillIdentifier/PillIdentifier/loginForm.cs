@@ -37,20 +37,27 @@ namespace PillIdentifier
             //default entry for testing
             if(username == "root" && password == "password")
             {
-                OpenPillAppForm();
+                correctLogin();
             }
 
             else
             {
-                MessageBox.Show("Information incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                incorrectLogin();
             }
         }
 
-        private void OpenPillAppForm()
+        private void correctLogin()
         {
+            //opens the main application 
             PillForm pillForm = new PillForm();
             pillForm.Show();
-            Hide();
+
+            this.Hide();
+        }
+
+        private void incorrectLogin()
+        {
+            MessageBox.Show("Information incorrect", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
