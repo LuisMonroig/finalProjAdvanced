@@ -15,6 +15,7 @@ using MySql.Data.MySqlClient;
 * History:
 *           5/14/2020 - File created. RRS
 *           5/17/2020 - added open and close connection functionality. RRS
+*           5/18/2020 - added select, update, and insert queries. RRS
 */
 
 namespace PillIdentifier
@@ -60,21 +61,21 @@ namespace PillIdentifier
         public void InsertPill(IPill pill)
         { 
             //insert query
-            string query = String.Format("INSERT INTO pills VALUES('{0}','{1}','{2}','{3}','{4}', null,TIMESTAMP('{5}'));",
+            string query = String.Format("INSERT INTO pills VALUES('{0}','{1}','{2}','{3}','{4}', '{5}',TIMESTAMP('{6}'));",
                 pill.Imprint, pill.Color, pill.Shape, pill.DrugName, pill.DrugStrength,
-                pill.CreationTimestamp);
+                pill.Photo, pill.CreationTimestamp);
 
             //runs insert
             MySqlCommand command = new MySqlCommand(query, connection);
             command.ExecuteNonQuery();
         }
 
-        public void InsertPill(string imprint, string color, string shape, string drugName, string drugStrength, string creationTimestamp)
+        public void InsertPill(string imprint, string color, string shape, string drugName, string drugStrength, string photo, string creationTimestamp)
         {
 
             //insert query
-            string query = String.Format("INSERT INTO pills VALUES('{0}','{1}','{2}','{3}','{4}', null,'{5}');",
-                imprint, color, shape, drugName, drugStrength, creationTimestamp);
+            string query = String.Format("INSERT INTO pills VALUES('{0}','{1}','{2}','{3}','{4}', {5},TIMESTAMP('{6}'));",
+                imprint, color, shape, drugName, drugStrength, photo, creationTimestamp);
 
             //runs insert
             MySqlCommand command = new MySqlCommand(query, connection);
@@ -97,7 +98,7 @@ namespace PillIdentifier
             }
 
             IPill pill = new Pill(dataReader.GetString(0), dataReader.GetString(1), dataReader.GetString(2),
-                dataReader.GetString(3), dataReader.GetString(4), dataReader.GetString(6));
+                dataReader.GetString(3), dataReader.GetString(4), dataReader.GetString(5), dataReader.GetString(6));
 
             //TODO: CHECK THAT THE METHOD ABOVE WORKS, DOWN HERE IS THE FALLBACK
             /*
@@ -123,7 +124,7 @@ namespace PillIdentifier
             while(dataReader.Read())
             {
                 IPill pill = new Pill(dataReader.GetString(0), dataReader.GetString(1), dataReader.GetString(2),
-                dataReader.GetString(3), dataReader.GetString(4), dataReader.GetString(6));
+                dataReader.GetString(3), dataReader.GetString(4), dataReader.GetString(5), dataReader.GetString(6));
 
                 pills.Add(pill);
             }
@@ -137,9 +138,9 @@ namespace PillIdentifier
         public void UpdatePill(IPill pill, string pillOriginalImprint)
         {
             string query = String.Format("UPDATE pills SET pill_imprint='{0}', pill_color='{1}'," +
-                " pill_shape='{2}', drug_name='{3}', drug_strength='{4}', creation_date=TIMESTAMP('{5}')" +
-                "WHERE pill_imprint='{6}'", 
-                pill.Imprint, pill.Color, pill.Shape, pill.DrugName, pill.DrugStrength, 
+                " pill_shape='{2}', drug_name='{3}', drug_strength='{4}', pill_photo = '{5}'," +
+                "creation_date=TIMESTAMP('{6}') WHERE pill_imprint='{7}'", 
+                pill.Imprint, pill.Color, pill.Shape, pill.DrugName, pill.DrugStrength, pill.Photo,
                 pill.CreationTimestamp, pillOriginalImprint);
 
             MySqlCommand command = new MySqlCommand(query, connection);

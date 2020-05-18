@@ -15,7 +15,8 @@ using System.Windows.Forms;
 * Author: Ricardo J. Ramirez Santiago
 * Description: form used to search for a pill through its imprint
 * History:
-*           5/17/2020 - form created and form layout made. RRS
+*           5/17/2020 - form created, form layout made, and search and modify functionality added. RRS
+*           5/18/2020 - search and identify functionality added. RRS
 */
 
 namespace PillIdentifier

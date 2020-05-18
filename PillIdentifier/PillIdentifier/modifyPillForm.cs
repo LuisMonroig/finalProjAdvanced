@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security;
 
 /*
 * Filename: ModifyPillForm.cs
@@ -14,6 +15,7 @@ using System.Windows.Forms;
 * Description: form used to modify a pill 
 * History:
 *           5/17/2020 - file created and form layout made. RRS
+*           5/18/2020 - connected file to the database and added all functionality. RRS
 */
 
 namespace PillIdentifier
@@ -42,6 +44,7 @@ namespace PillIdentifier
             shapeComboBox.Text = pill.Shape;
             drugNameTextBox.Text = pill.DrugName;
             drugStrengthTextBox.Text = pill.DrugStrength;
+            selectImageTextBox.Text = pill.Photo;
             creationTimeDateTimePicker.Value = DateTime.Parse(pill.CreationTimestamp);
 
             pillOriginalImprint = pill.Imprint;
@@ -63,6 +66,7 @@ namespace PillIdentifier
                 pill.Shape = shapeComboBox.Text;
                 pill.DrugName = drugNameTextBox.Text;
                 pill.DrugStrength = drugStrengthTextBox.Text;
+                pill.Photo = selectImageTextBox.Text;
                 pill.CreationTimestamp = creationTimeDateTimePicker.Value.ToString("yyyy-MM-dd hh:mm:ss"); ;
 
                 //checks that no fields were left in blank
@@ -90,6 +94,27 @@ namespace PillIdentifier
             catch (Exception except)
             {
                 MessageBox.Show(except.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void selectImageButton_Click(object sender, EventArgs e)
+        {
+            if (selectImageOpenFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    selectImageTextBox.Text = selectImageOpenFileDialog.SafeFileName;
+                }
+
+                catch (SecurityException except)
+                {
+                    MessageBox.Show(except.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                catch (Exception except)
+                {
+                    MessageBox.Show(except.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

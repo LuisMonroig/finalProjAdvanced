@@ -15,6 +15,7 @@ using System.Windows.Forms;
 * History:
 *           5/12/2020 - File created and menu layout made. RRS
 *           5/17/2020 - linked menu items to their respective forms and added database reference. RRS
+*           5/18/2020 - added welcome labels. RRS
 */
 
 namespace PillIdentifier
@@ -33,7 +34,7 @@ namespace PillIdentifier
         {
             string infoMessage = "Made by:\n" +
                 "Ricardo Ramirez Santiago #119372\n" +
-                "Luis Monroig";
+                "Luis E Monroig Perez #111604";
 
             MessageBox.Show(infoMessage, "About", MessageBoxButtons.OK);
         }

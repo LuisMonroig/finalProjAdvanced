@@ -14,6 +14,7 @@ using System.Windows.Forms;
 * Description: form used to show the information of all pills in the database
 * History:
 *           5/17/2020 - file created. RRS
+*           5/17/2020 - connected data grid view to database. RRS
 */
 
 namespace PillIdentifier
@@ -41,7 +42,7 @@ namespace PillIdentifier
             foreach (IPill pill in pills)
             {
                 pillDataGridView.Rows.Add(pill.Imprint, pill.Color, pill.Shape, pill.DrugName,
-                    pill.DrugStrength, pill.CreationTimestamp);
+                    pill.DrugStrength, pill.Photo, pill.CreationTimestamp);
             }
 
         }

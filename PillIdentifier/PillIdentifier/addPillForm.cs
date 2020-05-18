@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security;
+using System.IO;
 
 /*
 * Filename: AddPillForm.cs
@@ -15,6 +17,7 @@ using System.Windows.Forms;
 * Description: form used to add a pill 
 * History:
 *           5/17/2020 - file created and form layout made. RRS
+*           5/18/2020 - connected file to the database and added all functionality. RRS
 */
 
 namespace PillIdentifier
@@ -48,6 +51,7 @@ namespace PillIdentifier
                 string shape = shapeComboBox.Text;
                 string drugName = drugNameTextBox.Text;
                 string drugStrength = drugStrengthTextBox.Text;
+                string photo = selectImageTextBox.Text;
                 string creationTime = creationTimeDateTimePicker.Value.ToString("yyyy-MM-dd hh:mm:ss");
 
                 //checks that no fields were left in blank
@@ -65,9 +69,15 @@ namespace PillIdentifier
                 {
                     throw new ArgumentException("Drug name must not be empty");
                 }
+                
+                else if (photo.Replace(" ", "") == "")
+                {
+                    throw new ArgumentException("photo must be selected");
+                }
+
 
                 //inserts the pill
-                IPill pill = new Pill(imprint, color, shape, drugName, drugStrength, creationTime);
+                IPill pill = new Pill(imprint, color, shape, drugName, drugStrength, photo, creationTime);
                 pillDB.InsertPill(pill);
 
                 MessageBox.Show("Pill added successfully!", "Success", MessageBoxButtons.OK);
@@ -89,6 +99,28 @@ namespace PillIdentifier
         private void addPillForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             pillForm.Show();
+        }
+
+        //prompts the user to select the directory of the image to be used for the pill
+        private void selectImageButton_Click(object sender, EventArgs e)
+        {
+            if (selectImageOpenFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    selectImageTextBox.Text = selectImageOpenFileDialog.SafeFileName;
+                }
+
+                catch (SecurityException except)
+                {
+                    MessageBox.Show(except.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                catch (Exception except)
+                {
+                    MessageBox.Show(except.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

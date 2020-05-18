@@ -41,6 +41,10 @@
             this.drugStrengthTextBox = new System.Windows.Forms.TextBox();
             this.creationTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.enterButton = new System.Windows.Forms.Button();
+            this.selectImageButton = new System.Windows.Forms.Button();
+            this.selectImageLabel = new System.Windows.Forms.Label();
+            this.selectImageTextBox = new System.Windows.Forms.TextBox();
+            this.selectImageOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // imprintLabel
@@ -155,7 +159,7 @@
             // 
             // enterButton
             // 
-            this.enterButton.Location = new System.Drawing.Point(274, 305);
+            this.enterButton.Location = new System.Drawing.Point(363, 333);
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(75, 23);
             this.enterButton.TabIndex = 7;
@@ -163,11 +167,46 @@
             this.enterButton.UseVisualStyleBackColor = true;
             this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
+            // selectImageButton
+            // 
+            this.selectImageButton.Location = new System.Drawing.Point(363, 284);
+            this.selectImageButton.Name = "selectImageButton";
+            this.selectImageButton.Size = new System.Drawing.Size(75, 23);
+            this.selectImageButton.TabIndex = 8;
+            this.selectImageButton.Text = "select";
+            this.selectImageButton.UseVisualStyleBackColor = true;
+            this.selectImageButton.Click += new System.EventHandler(this.selectImageButton_Click);
+            // 
+            // selectImageLabel
+            // 
+            this.selectImageLabel.AutoSize = true;
+            this.selectImageLabel.Location = new System.Drawing.Point(86, 289);
+            this.selectImageLabel.Name = "selectImageLabel";
+            this.selectImageLabel.Size = new System.Drawing.Size(38, 13);
+            this.selectImageLabel.TabIndex = 9;
+            this.selectImageLabel.Text = "image:";
+            // 
+            // selectImageTextBox
+            // 
+            this.selectImageTextBox.Location = new System.Drawing.Point(131, 286);
+            this.selectImageTextBox.Name = "selectImageTextBox";
+            this.selectImageTextBox.ReadOnly = true;
+            this.selectImageTextBox.Size = new System.Drawing.Size(226, 20);
+            this.selectImageTextBox.TabIndex = 10;
+            // 
+            // selectImageOpenFileDialog
+            // 
+            this.selectImageOpenFileDialog.FileName = "select image file";
+            this.selectImageOpenFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
+            // 
             // AddPillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 340);
+            this.ClientSize = new System.Drawing.Size(502, 386);
+            this.Controls.Add(this.selectImageTextBox);
+            this.Controls.Add(this.selectImageLabel);
+            this.Controls.Add(this.selectImageButton);
             this.Controls.Add(this.enterButton);
             this.Controls.Add(this.creationTimeDateTimePicker);
             this.Controls.Add(this.drugStrengthTextBox);
@@ -204,5 +243,9 @@
         private System.Windows.Forms.TextBox drugStrengthTextBox;
         private System.Windows.Forms.DateTimePicker creationTimeDateTimePicker;
         private System.Windows.Forms.Button enterButton;
+        private System.Windows.Forms.Button selectImageButton;
+        private System.Windows.Forms.Label selectImageLabel;
+        private System.Windows.Forms.TextBox selectImageTextBox;
+        private System.Windows.Forms.OpenFileDialog selectImageOpenFileDialog;
     }
 }

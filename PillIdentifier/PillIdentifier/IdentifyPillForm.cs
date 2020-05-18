@@ -13,7 +13,7 @@ using System.Windows.Forms;
 * Author: Ricardo J. Ramirez Santiago
 * Description: form used to show the information of a pill
 * History:
-*           5/18/2020 - file created, form layout made. RRS
+*           5/18/2020 - file created, form layout made. Added all functionlity. RRS
 */
 
 namespace PillIdentifier
@@ -34,6 +34,7 @@ namespace PillIdentifier
             shapeTextBox.Text = pill.Shape;
             drugNameTextBox.Text = pill.DrugName;
             drugStrengthTextBox.Text = pill.DrugStrength;
+            imageTextBox.Text = pill.Photo;
             creationTimeDateTimePicker.Value = DateTime.Parse(pill.CreationTimestamp);
 
             //trick to make the date time picker unchangable

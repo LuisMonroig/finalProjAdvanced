@@ -34,6 +34,7 @@
             this.shapeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drugNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drugStrengthColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pillPhoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creationTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pillDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -48,11 +49,12 @@
             this.shapeColumn,
             this.drugNameColumn,
             this.drugStrengthColumn,
+            this.pillPhoto,
             this.creationTimeColumn});
             this.pillDataGridView.Location = new System.Drawing.Point(13, 13);
             this.pillDataGridView.Name = "pillDataGridView";
             this.pillDataGridView.ReadOnly = true;
-            this.pillDataGridView.Size = new System.Drawing.Size(643, 382);
+            this.pillDataGridView.Size = new System.Drawing.Size(744, 382);
             this.pillDataGridView.TabIndex = 0;
             // 
             // imprintColumn
@@ -85,6 +87,12 @@
             this.drugStrengthColumn.Name = "drugStrengthColumn";
             this.drugStrengthColumn.ReadOnly = true;
             // 
+            // pillPhoto
+            // 
+            this.pillPhoto.HeaderText = "Photo";
+            this.pillPhoto.Name = "pillPhoto";
+            this.pillPhoto.ReadOnly = true;
+            // 
             // creationTimeColumn
             // 
             this.creationTimeColumn.HeaderText = "Creation Time";
@@ -95,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 407);
+            this.ClientSize = new System.Drawing.Size(787, 407);
             this.Controls.Add(this.pillDataGridView);
             this.Name = "PillReportForm";
             this.Text = "pillReportForm";
@@ -113,6 +121,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn shapeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn drugNameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn drugStrengthColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pillPhoto;
         private System.Windows.Forms.DataGridViewTextBoxColumn creationTimeColumn;
     }
 }

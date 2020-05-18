@@ -41,6 +41,8 @@
             this.drugStrengthTextBox = new System.Windows.Forms.TextBox();
             this.creationTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.closeButton = new System.Windows.Forms.Button();
+            this.imageLabel = new System.Windows.Forms.Label();
+            this.imageTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // imprintLabel
@@ -146,7 +148,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(306, 298);
+            this.closeButton.Location = new System.Drawing.Point(306, 312);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 3;
@@ -154,11 +156,29 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // imageLabel
+            // 
+            this.imageLabel.AutoSize = true;
+            this.imageLabel.Location = new System.Drawing.Point(53, 265);
+            this.imageLabel.Name = "imageLabel";
+            this.imageLabel.Size = new System.Drawing.Size(54, 13);
+            this.imageLabel.TabIndex = 0;
+            this.imageLabel.Text = "image file:";
+            // 
+            // imageTextBox
+            // 
+            this.imageTextBox.Location = new System.Drawing.Point(181, 257);
+            this.imageTextBox.Name = "imageTextBox";
+            this.imageTextBox.ReadOnly = true;
+            this.imageTextBox.Size = new System.Drawing.Size(200, 20);
+            this.imageTextBox.TabIndex = 4;
+            // 
             // IdentifyPillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 333);
+            this.ClientSize = new System.Drawing.Size(413, 347);
+            this.Controls.Add(this.imageTextBox);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.creationTimeDateTimePicker);
             this.Controls.Add(this.drugStrengthTextBox);
@@ -166,6 +186,7 @@
             this.Controls.Add(this.shapeTextBox);
             this.Controls.Add(this.colorTextBox);
             this.Controls.Add(this.imprintTextBox);
+            this.Controls.Add(this.imageLabel);
             this.Controls.Add(this.creationTimeLabel);
             this.Controls.Add(this.drugStrengthLabel);
             this.Controls.Add(this.drugNameLabel);
@@ -194,5 +215,7 @@
         private System.Windows.Forms.TextBox drugStrengthTextBox;
         private System.Windows.Forms.DateTimePicker creationTimeDateTimePicker;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Label imageLabel;
+        private System.Windows.Forms.TextBox imageTextBox;
     }
 }
