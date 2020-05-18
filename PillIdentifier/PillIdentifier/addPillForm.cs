@@ -8,6 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+* Filename: AddPillForm.cs
+* Author: Ricardo J. Ramirez Santiago
+* Description: form used to add a pill 
+* History:
+*           5/17/2020 - file created and form layout made. RRS
+*/
+
 namespace PillIdentifier
 {
     public partial class AddPillForm : Form

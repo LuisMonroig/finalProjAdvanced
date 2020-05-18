@@ -1,6 +1,6 @@
 ﻿namespace PillIdentifier
 {
-    partial class searchPillForm
+    partial class SearchPillForm
     {
         /// <summary>
         /// Required designer variable.

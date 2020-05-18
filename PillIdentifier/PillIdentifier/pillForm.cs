@@ -14,15 +14,19 @@ using System.Windows.Forms;
 * Description: main form for the pill app
 * History:
 *           5/12/2020 - File created and menu layout made. RRS
+*           5/17/2020 - linked menu items to their respective forms and added database reference. RRS
 */
 
 namespace PillIdentifier
 {
     public partial class PillForm : Form
     {
-        public PillForm()
+
+        private PillDB pillDB;
+        public PillForm(ref PillDB pillDB)
         {
             InitializeComponent();
+            this.pillDB = pillDB;
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,18 +47,19 @@ namespace PillIdentifier
 
         private void PillForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            pillDB.CloseConneciton();
             Application.Exit();
         }
 
         private void modifyPillToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            searchPillForm searchForm = new searchPillForm(this, SearchType.SearchAndModify);
+            SearchPillForm searchForm = new SearchPillForm(this, SearchType.SearchAndModify);
             searchForm.Show();
         }
 
         private void IdentifyPillToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            searchPillForm searchForm = new searchPillForm(this, SearchType.SearchAndIdentify);
+            SearchPillForm searchForm = new SearchPillForm(this, SearchType.SearchAndIdentify);
             searchForm.Show();
         }
 

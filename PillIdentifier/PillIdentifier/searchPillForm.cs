@@ -9,16 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+* Filename: SearchPillForm.cs
+* Author: Ricardo J. Ramirez Santiago
+* Description: form used to search for a pill through its imprint
+* History:
+*           5/17/2020 - form created and form layout made. RRS
+*/
+
 namespace PillIdentifier
 {
-    public partial class searchPillForm : Form
+    public partial class SearchPillForm : Form
     {
 
         private PillForm pillForm; //reference to pillForm
         private readonly SearchType searchType; //holds if the search was done to modify a pill 
                                                 //or to Identify a pill (display its information)
         
-        public searchPillForm(PillForm pillForm, SearchType searchType)
+        public SearchPillForm(PillForm pillForm, SearchType searchType)
         {
             InitializeComponent();
 
