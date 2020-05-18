@@ -21,12 +21,29 @@ namespace PillIdentifier
     public partial class PillReportForm : Form
     {
         private PillForm pillForm; //reference to pillForm
+        private PillDB pillDB; //reference to the database
 
-        public PillReportForm(PillForm pillForm)
+        public PillReportForm(PillForm pillForm, ref PillDB pillDB)
         {
             InitializeComponent();
 
             this.pillForm = pillForm;
+            this.pillDB = pillDB;
+
+            InitializePillDataGridView();
+        }
+
+        //adds all the pills to the data grid view
+        private void InitializePillDataGridView()
+        {
+            List<IPill> pills = pillDB.SelectAllPills();
+
+            foreach (IPill pill in pills)
+            {
+                pillDataGridView.Rows.Add(pill.Imprint, pill.Color, pill.Shape, pill.DrugName,
+                    pill.DrugStrength, pill.CreationTimestamp);
+            }
+
         }
 
         private void pillReportForm_FormClosing(object sender, FormClosingEventArgs e)

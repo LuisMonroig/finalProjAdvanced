@@ -147,6 +147,7 @@
             // 
             // creationTimeDateTimePicker
             // 
+            this.creationTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.creationTimeDateTimePicker.Location = new System.Drawing.Point(132, 241);
             this.creationTimeDateTimePicker.Name = "creationTimeDateTimePicker";
             this.creationTimeDateTimePicker.Size = new System.Drawing.Size(200, 20);
@@ -162,7 +163,7 @@
             this.enterButton.UseVisualStyleBackColor = true;
             this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
             // 
-            // addPillForm
+            // AddPillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,7 +181,7 @@
             this.Controls.Add(this.shapeLabel);
             this.Controls.Add(this.colorLabel);
             this.Controls.Add(this.imprintLabel);
-            this.Name = "addPillForm";
+            this.Name = "AddPillForm";
             this.Text = "addPillForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.addPillForm_FormClosing);
             this.ResumeLayout(false);

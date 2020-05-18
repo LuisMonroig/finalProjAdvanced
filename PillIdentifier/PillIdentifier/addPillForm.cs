@@ -32,6 +32,9 @@ namespace PillIdentifier
 
             this.pillForm = pillForm;
             this.pillDB = pillDB;
+
+            //allows for date time picker to accept both date and time
+            creationTimeDateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm:ss";
         }
 
         private void enterButton_Click(object sender, EventArgs e)
@@ -39,12 +42,13 @@ namespace PillIdentifier
 
             try
             {
+                //saves the pill information
                 string imprint = imprintTextBox.Text;
                 string color = colorComboBox.Text;
                 string shape = shapeComboBox.Text;
                 string drugName = drugNameTextBox.Text;
                 string drugStrength = drugStrengthTextBox.Text;
-                string creationTime = creationTimeDateTimePicker.Value.ToString("yyyy-MM-dd");
+                string creationTime = creationTimeDateTimePicker.Value.ToString("yyyy-MM-dd hh:mm:ss");
 
                 //checks that no fields were left in blank
                 if (imprint.Replace(" ", "") == "")
@@ -62,8 +66,8 @@ namespace PillIdentifier
                     throw new ArgumentException("Drug name must not be empty");
                 }
 
+                //inserts the pill
                 IPill pill = new Pill(imprint, color, shape, drugName, drugStrength, creationTime);
-
                 pillDB.InsertPill(pill);
 
                 MessageBox.Show("Pill added successfully!", "Success", MessageBoxButtons.OK);

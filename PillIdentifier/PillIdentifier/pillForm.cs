@@ -70,7 +70,7 @@ namespace PillIdentifier
 
         private void pillReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PillReportForm reportForm = new PillReportForm(this);
+            PillReportForm reportForm = new PillReportForm(this,ref pillDB);
             reportForm.Show();
             this.Hide();
         }

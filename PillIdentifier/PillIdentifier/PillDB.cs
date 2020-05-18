@@ -110,6 +110,29 @@ namespace PillIdentifier
 
             return pill;
         }
+        
+        public List<IPill> SelectAllPills()
+        {
+            List<IPill> pills = new List<IPill>();
+
+            string query = String.Format("SELECT * FROM pills");
+
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader dataReader = command.ExecuteReader();
+
+            while(dataReader.Read())
+            {
+                IPill pill = new Pill(dataReader.GetString(0), dataReader.GetString(1), dataReader.GetString(2),
+                dataReader.GetString(3), dataReader.GetString(4), dataReader.GetString(6));
+
+                pills.Add(pill);
+            }
+
+
+            dataReader.Close();
+
+            return pills;
+        }
 
         public void UpdatePill(IPill pill, string pillOriginalImprint)
         {

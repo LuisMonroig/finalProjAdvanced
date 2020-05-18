@@ -33,6 +33,10 @@ namespace PillIdentifier
             this.pillDB = pillDB;
             this.pill = pill;
 
+            //allows for date time picker to accept both date and time
+            creationTimeDateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+
+            //moves pill information to the form
             imprintTextBox.Text = pill.Imprint;
             colorComboBox.Text = pill.Color;
             shapeComboBox.Text = pill.Shape;
@@ -59,7 +63,7 @@ namespace PillIdentifier
                 pill.Shape = shapeComboBox.Text;
                 pill.DrugName = drugNameTextBox.Text;
                 pill.DrugStrength = drugStrengthTextBox.Text;
-                pill.CreationTimestamp = creationTimeDateTimePicker.Value.ToString("yyyy-MM-dd");
+                pill.CreationTimestamp = creationTimeDateTimePicker.Value.ToString("yyyy-MM-dd hh:mm:ss"); ;
 
                 //checks that no fields were left in blank
                 if (pill.Imprint.Replace(" ", "") == "")

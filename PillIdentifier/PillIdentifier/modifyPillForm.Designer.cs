@@ -136,6 +136,7 @@
             // 
             // creationTimeDateTimePicker
             // 
+            this.creationTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.creationTimeDateTimePicker.Location = new System.Drawing.Point(127, 234);
             this.creationTimeDateTimePicker.Name = "creationTimeDateTimePicker";
             this.creationTimeDateTimePicker.Size = new System.Drawing.Size(200, 20);
