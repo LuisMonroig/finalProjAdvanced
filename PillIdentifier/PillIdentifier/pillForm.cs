@@ -53,13 +53,13 @@ namespace PillIdentifier
 
         private void modifyPillToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SearchPillForm searchForm = new SearchPillForm(this, SearchType.SearchAndModify);
+            SearchPillForm searchForm = new SearchPillForm(this, ref pillDB, SearchType.SearchAndModify);
             searchForm.Show();
         }
 
         private void IdentifyPillToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SearchPillForm searchForm = new SearchPillForm(this, SearchType.SearchAndIdentify);
+            SearchPillForm searchForm = new SearchPillForm(this, ref pillDB, SearchType.SearchAndIdentify);
             searchForm.Show();
         }
 

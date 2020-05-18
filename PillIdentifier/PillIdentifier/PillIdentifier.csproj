@@ -53,6 +53,12 @@
     <Compile Include="AddPillForm.Designer.cs">
       <DependentUpon>AddPillForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IdentifyPillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IdentifyPillForm.Designer.cs">
+      <DependentUpon>IdentifyPillForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PillReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </Compile>
     <EmbeddedResource Include="AddPillForm.resx">
       <DependentUpon>AddPillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IdentifyPillForm.resx">
+      <DependentUpon>IdentifyPillForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

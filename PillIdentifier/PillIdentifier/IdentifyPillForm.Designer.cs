@@ -1,6 +1,6 @@
 ﻿namespace PillIdentifier
 {
-    partial class ModifyPillForm
+    partial class IdentifyPillForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,18 +35,18 @@
             this.drugStrengthLabel = new System.Windows.Forms.Label();
             this.creationTimeLabel = new System.Windows.Forms.Label();
             this.imprintTextBox = new System.Windows.Forms.TextBox();
-            this.colorComboBox = new System.Windows.Forms.ComboBox();
-            this.shapeComboBox = new System.Windows.Forms.ComboBox();
+            this.colorTextBox = new System.Windows.Forms.TextBox();
+            this.shapeTextBox = new System.Windows.Forms.TextBox();
             this.drugNameTextBox = new System.Windows.Forms.TextBox();
             this.drugStrengthTextBox = new System.Windows.Forms.TextBox();
             this.creationTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.enterButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // imprintLabel
             // 
             this.imprintLabel.AutoSize = true;
-            this.imprintLabel.Location = new System.Drawing.Point(82, 39);
+            this.imprintLabel.Location = new System.Drawing.Point(59, 35);
             this.imprintLabel.Name = "imprintLabel";
             this.imprintLabel.Size = new System.Drawing.Size(40, 13);
             this.imprintLabel.TabIndex = 0;
@@ -55,7 +55,7 @@
             // colorLabel
             // 
             this.colorLabel.AutoSize = true;
-            this.colorLabel.Location = new System.Drawing.Point(88, 74);
+            this.colorLabel.Location = new System.Drawing.Point(59, 71);
             this.colorLabel.Name = "colorLabel";
             this.colorLabel.Size = new System.Drawing.Size(33, 13);
             this.colorLabel.TabIndex = 0;
@@ -64,7 +64,7 @@
             // shapeLabel
             // 
             this.shapeLabel.AutoSize = true;
-            this.shapeLabel.Location = new System.Drawing.Point(82, 111);
+            this.shapeLabel.Location = new System.Drawing.Point(59, 110);
             this.shapeLabel.Name = "shapeLabel";
             this.shapeLabel.Size = new System.Drawing.Size(39, 13);
             this.shapeLabel.TabIndex = 0;
@@ -73,95 +73,98 @@
             // drugNameLabel
             // 
             this.drugNameLabel.AutoSize = true;
-            this.drugNameLabel.Location = new System.Drawing.Point(61, 151);
+            this.drugNameLabel.Location = new System.Drawing.Point(53, 149);
             this.drugNameLabel.Name = "drugNameLabel";
             this.drugNameLabel.Size = new System.Drawing.Size(60, 13);
-            this.drugNameLabel.TabIndex = 1;
+            this.drugNameLabel.TabIndex = 0;
             this.drugNameLabel.Text = "drug name:";
             // 
             // drugStrengthLabel
             // 
             this.drugStrengthLabel.AutoSize = true;
-            this.drugStrengthLabel.Location = new System.Drawing.Point(49, 192);
+            this.drugStrengthLabel.Location = new System.Drawing.Point(53, 187);
             this.drugStrengthLabel.Name = "drugStrengthLabel";
             this.drugStrengthLabel.Size = new System.Drawing.Size(72, 13);
-            this.drugStrengthLabel.TabIndex = 2;
+            this.drugStrengthLabel.TabIndex = 0;
             this.drugStrengthLabel.Text = "drug strength:";
             // 
             // creationTimeLabel
             // 
             this.creationTimeLabel.AutoSize = true;
-            this.creationTimeLabel.Location = new System.Drawing.Point(51, 234);
+            this.creationTimeLabel.Location = new System.Drawing.Point(53, 227);
             this.creationTimeLabel.Name = "creationTimeLabel";
             this.creationTimeLabel.Size = new System.Drawing.Size(70, 13);
-            this.creationTimeLabel.TabIndex = 3;
+            this.creationTimeLabel.TabIndex = 0;
             this.creationTimeLabel.Text = "creation time:";
             // 
             // imprintTextBox
             // 
-            this.imprintTextBox.Location = new System.Drawing.Point(127, 39);
+            this.imprintTextBox.Location = new System.Drawing.Point(181, 32);
             this.imprintTextBox.Name = "imprintTextBox";
+            this.imprintTextBox.ReadOnly = true;
             this.imprintTextBox.Size = new System.Drawing.Size(100, 20);
-            this.imprintTextBox.TabIndex = 4;
+            this.imprintTextBox.TabIndex = 1;
             // 
-            // colorComboBox
+            // colorTextBox
             // 
-            this.colorComboBox.FormattingEnabled = true;
-            this.colorComboBox.Location = new System.Drawing.Point(127, 74);
-            this.colorComboBox.Name = "colorComboBox";
-            this.colorComboBox.Size = new System.Drawing.Size(121, 21);
-            this.colorComboBox.TabIndex = 5;
+            this.colorTextBox.Location = new System.Drawing.Point(181, 68);
+            this.colorTextBox.Name = "colorTextBox";
+            this.colorTextBox.ReadOnly = true;
+            this.colorTextBox.Size = new System.Drawing.Size(100, 20);
+            this.colorTextBox.TabIndex = 1;
             // 
-            // shapeComboBox
+            // shapeTextBox
             // 
-            this.shapeComboBox.FormattingEnabled = true;
-            this.shapeComboBox.Location = new System.Drawing.Point(127, 111);
-            this.shapeComboBox.Name = "shapeComboBox";
-            this.shapeComboBox.Size = new System.Drawing.Size(121, 21);
-            this.shapeComboBox.TabIndex = 6;
+            this.shapeTextBox.Location = new System.Drawing.Point(181, 103);
+            this.shapeTextBox.Name = "shapeTextBox";
+            this.shapeTextBox.ReadOnly = true;
+            this.shapeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.shapeTextBox.TabIndex = 1;
             // 
             // drugNameTextBox
             // 
-            this.drugNameTextBox.Location = new System.Drawing.Point(127, 151);
+            this.drugNameTextBox.Location = new System.Drawing.Point(181, 146);
             this.drugNameTextBox.Name = "drugNameTextBox";
+            this.drugNameTextBox.ReadOnly = true;
             this.drugNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.drugNameTextBox.TabIndex = 7;
+            this.drugNameTextBox.TabIndex = 1;
             // 
             // drugStrengthTextBox
             // 
-            this.drugStrengthTextBox.Location = new System.Drawing.Point(127, 192);
+            this.drugStrengthTextBox.Location = new System.Drawing.Point(181, 184);
             this.drugStrengthTextBox.Name = "drugStrengthTextBox";
+            this.drugStrengthTextBox.ReadOnly = true;
             this.drugStrengthTextBox.Size = new System.Drawing.Size(100, 20);
-            this.drugStrengthTextBox.TabIndex = 8;
+            this.drugStrengthTextBox.TabIndex = 1;
             // 
             // creationTimeDateTimePicker
             // 
-            this.creationTimeDateTimePicker.Location = new System.Drawing.Point(127, 234);
+            this.creationTimeDateTimePicker.Location = new System.Drawing.Point(181, 219);
             this.creationTimeDateTimePicker.Name = "creationTimeDateTimePicker";
             this.creationTimeDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.creationTimeDateTimePicker.TabIndex = 9;
+            this.creationTimeDateTimePicker.TabIndex = 2;
             // 
-            // enterButton
+            // closeButton
             // 
-            this.enterButton.Location = new System.Drawing.Point(286, 305);
-            this.enterButton.Name = "enterButton";
-            this.enterButton.Size = new System.Drawing.Size(75, 23);
-            this.enterButton.TabIndex = 10;
-            this.enterButton.Text = "enter";
-            this.enterButton.UseVisualStyleBackColor = true;
-            this.enterButton.Click += new System.EventHandler(this.enterButton_Click);
+            this.closeButton.Location = new System.Drawing.Point(306, 298);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(75, 23);
+            this.closeButton.TabIndex = 3;
+            this.closeButton.Text = "close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
-            // ModifyPillForm
+            // IdentifyPillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 340);
-            this.Controls.Add(this.enterButton);
+            this.ClientSize = new System.Drawing.Size(413, 333);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.creationTimeDateTimePicker);
             this.Controls.Add(this.drugStrengthTextBox);
             this.Controls.Add(this.drugNameTextBox);
-            this.Controls.Add(this.shapeComboBox);
-            this.Controls.Add(this.colorComboBox);
+            this.Controls.Add(this.shapeTextBox);
+            this.Controls.Add(this.colorTextBox);
             this.Controls.Add(this.imprintTextBox);
             this.Controls.Add(this.creationTimeLabel);
             this.Controls.Add(this.drugStrengthLabel);
@@ -169,9 +172,8 @@
             this.Controls.Add(this.shapeLabel);
             this.Controls.Add(this.colorLabel);
             this.Controls.Add(this.imprintLabel);
-            this.Name = "ModifyPillForm";
-            this.Text = "modifyPillForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.modifyPillForm_FormClosing);
+            this.Name = "IdentifyPillForm";
+            this.Text = "IdentifyPillForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,11 +188,11 @@
         private System.Windows.Forms.Label drugStrengthLabel;
         private System.Windows.Forms.Label creationTimeLabel;
         private System.Windows.Forms.TextBox imprintTextBox;
-        private System.Windows.Forms.ComboBox colorComboBox;
-        private System.Windows.Forms.ComboBox shapeComboBox;
+        private System.Windows.Forms.TextBox colorTextBox;
+        private System.Windows.Forms.TextBox shapeTextBox;
         private System.Windows.Forms.TextBox drugNameTextBox;
         private System.Windows.Forms.TextBox drugStrengthTextBox;
         private System.Windows.Forms.DateTimePicker creationTimeDateTimePicker;
-        private System.Windows.Forms.Button enterButton;
+        private System.Windows.Forms.Button closeButton;
     }
 }

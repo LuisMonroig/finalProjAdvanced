@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,20 +81,46 @@ namespace PillIdentifier
             command.ExecuteNonQuery();
         }
 
-        public void SelectPill(string imprint)
+        public IPill SelectPill(string imprint)
         {
-            string query = String.Format("SELECT * FROM pills WHERE imprint = '{0}'", imprint);
+            string query = String.Format("SELECT * FROM pills WHERE pill_imprint = '{0}'", imprint);
 
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader dataReader = command.ExecuteReader();
 
             dataReader.Read();
 
-            IPill pill = new Pill(dataReader["pill_imprint"] + "", dataReader["pill_color"] + "",
+            //checks if the pill_imprint is null
+            if (dataReader.IsDBNull(0))
+            {
+                throw new InvalidDataException("Pill not found");
+            }
+
+            IPill pill = new Pill(dataReader.GetString(0), dataReader.GetString(1), dataReader.GetString(2),
+                dataReader.GetString(3), dataReader.GetString(4), dataReader.GetString(6));
+
+            //TODO: CHECK THAT THE METHOD ABOVE WORKS, DOWN HERE IS THE FALLBACK
+            /*
+                IPill pill = new Pill(dataReader.GetString(0) + "", dataReader["pill_color"] + "",
                 dataReader["pill_shape"] + "", dataReader["drug_name"] + "", dataReader["drug_strength"] + "", 
                 dataReader["creation_date"] + "");
+            */
 
             dataReader.Close();
+
+            return pill;
+        }
+
+        public void UpdatePill(IPill pill, string pillOriginalImprint)
+        {
+            string query = String.Format("UPDATE pills SET pill_imprint='{0}', pill_color='{1}'," +
+                " pill_shape='{2}', drug_name='{3}', drug_strength='{4}', creation_date=TIMESTAMP('{5}')" +
+                "WHERE pill_imprint='{6}'", 
+                pill.Imprint, pill.Color, pill.Shape, pill.DrugName, pill.DrugStrength, 
+                pill.CreationTimestamp, pillOriginalImprint);
+
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.ExecuteNonQuery();
         }
     }
 }

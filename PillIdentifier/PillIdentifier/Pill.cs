@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace PillIdentifier
 {
-    class Pill: IPill
+    public class Pill: IPill
     {
         private string imprint;
         private string color;
