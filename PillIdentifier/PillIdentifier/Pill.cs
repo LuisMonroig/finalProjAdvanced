@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 * Description: describes the information of a pill
 * History:
 *           5/10/2020 - File created and class attributes defined. RRS
+*           5/18/2020 - added properties for all attributes. RRS
 */
 
 namespace PillIdentifier
@@ -21,16 +22,23 @@ namespace PillIdentifier
         private string shape;
         private string drugName;
         private string drugStrength;
-        private DateTime creationTime;
+        private string creationTimestamp;
 
-        public Pill(string imprint, string color, string shape, string drugName, string drugStrength, DateTime creationTime)
+        public Pill(string imprint, string color, string shape, string drugName, string drugStrength, string creationTimestamp)
         {
-            this.imprint = imprint;
-            this.color = color;
-            this.shape = shape;
-            this.drugName = drugName;
-            this.drugStrength = drugStrength;
-            this.creationTime = creationTime;
+            this.Imprint = imprint;
+            this.Color = color;
+            this.Shape = shape;
+            this.DrugName = drugName;
+            this.DrugStrength = drugStrength;
+            this.CreationTimestamp = creationTimestamp;
         }
+
+        public string Imprint { get => imprint; set => imprint = value; }
+        public string Color { get => color; set => color = value; }
+        public string Shape { get => shape; set => shape = value; }
+        public string DrugName { get => drugName; set => drugName = value; }
+        public string DrugStrength { get => drugStrength; set => drugStrength = value; }
+        public string CreationTimestamp { get => creationTimestamp; set => creationTimestamp = value; }
     }
 }

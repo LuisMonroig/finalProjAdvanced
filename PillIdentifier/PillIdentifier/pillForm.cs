@@ -40,7 +40,7 @@ namespace PillIdentifier
 
         private void addPillToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddPillForm addForm = new AddPillForm(this);
+            AddPillForm addForm = new AddPillForm(this, ref pillDB);
             addForm.Show();
             this.Hide();
         }

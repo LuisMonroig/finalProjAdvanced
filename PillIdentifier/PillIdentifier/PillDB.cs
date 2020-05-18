@@ -55,5 +55,45 @@ namespace PillIdentifier
         {
             connection.Close();
         }
+
+        public void InsertPill(IPill pill)
+        { 
+            //insert query
+            string query = String.Format("INSERT INTO pills VALUES('{0}','{1}','{2}','{3}','{4}', null,TIMESTAMP('{5}'));",
+                pill.Imprint, pill.Color, pill.Shape, pill.DrugName, pill.DrugStrength,
+                pill.CreationTimestamp);
+
+            //runs insert
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.ExecuteNonQuery();
+        }
+
+        public void InsertPill(string imprint, string color, string shape, string drugName, string drugStrength, string creationTimestamp)
+        {
+
+            //insert query
+            string query = String.Format("INSERT INTO pills VALUES('{0}','{1}','{2}','{3}','{4}', null,'{5}');",
+                imprint, color, shape, drugName, drugStrength, creationTimestamp);
+
+            //runs insert
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.ExecuteNonQuery();
+        }
+
+        public void SelectPill(string imprint)
+        {
+            string query = String.Format("SELECT * FROM pills WHERE imprint = '{0}'", imprint);
+
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader dataReader = command.ExecuteReader();
+
+            dataReader.Read();
+
+            IPill pill = new Pill(dataReader["pill_imprint"] + "", dataReader["pill_color"] + "",
+                dataReader["pill_shape"] + "", dataReader["drug_name"] + "", dataReader["drug_strength"] + "", 
+                dataReader["creation_date"] + "");
+
+            dataReader.Close();
+        }
     }
 }

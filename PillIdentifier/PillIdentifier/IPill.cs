@@ -12,12 +12,18 @@ using System.Threading.Tasks;
 * Description: interface class for a pill
 * History:
 *           5/10/2020 - File created and interface defined. RRS
+*           5/17/2020 - Added properties to the interface. RRS
 */
 
 namespace PillIdentifier
 {
-    interface IPill
+    public interface IPill
     {
-        
+        string Imprint { get; set; }
+        string Color { get; set; }
+        string Shape { get; set; }
+        string DrugName { get; set; }
+        string DrugStrength { get; set; }
+        string CreationTimestamp { get; set; }
     }
 }
