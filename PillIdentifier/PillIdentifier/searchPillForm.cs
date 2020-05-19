@@ -17,6 +17,7 @@ using System.Windows.Forms;
 * History:
 *           5/17/2020 - form created, form layout made, and search and modify functionality added. RRS
 *           5/18/2020 - search and identify functionality added. RRS
+*           5/19/2020 - improved code readability. RRS
 */
 
 namespace PillIdentifier
@@ -39,12 +40,13 @@ namespace PillIdentifier
             this.searchType = searchType;
         }
 
+        //attempts to search for pill
         private void searchButton_Click(object sender, EventArgs e)
         {
             try
             {
                 string imprint = pillImprintTextBox.Text;
-                pill = pillDB.SelectPill(imprint);
+                pill = pillDB.SelectPill(imprint); //returns pill from database
 
                 pillFound();
             }
@@ -60,13 +62,10 @@ namespace PillIdentifier
             }
         }
 
-        private void pillNotFound()
-        {
-            MessageBox.Show("Error: pill was not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
+        //contniues to corresponding form (identify a pill or modify a pill) once pill is found
         private void pillFound()
         {
+            //goes to identify form
             if (searchType == SearchType.SearchAndIdentify)
             {
                 IdentifyPillForm identifyForm = new IdentifyPillForm(pillForm, pill);
@@ -74,6 +73,7 @@ namespace PillIdentifier
                 this.Close();
             }
 
+            //goes to modify form
             else if (searchType == SearchType.SearchAndModify)
             {
                 ModifyPillForm modifyForm = new ModifyPillForm(pillForm, ref pillDB, pill);

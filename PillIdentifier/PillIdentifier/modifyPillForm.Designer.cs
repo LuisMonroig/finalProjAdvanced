@@ -104,6 +104,7 @@
             // imprintTextBox
             // 
             this.imprintTextBox.Location = new System.Drawing.Point(109, 26);
+            this.imprintTextBox.MaxLength = 15;
             this.imprintTextBox.Name = "imprintTextBox";
             this.imprintTextBox.Size = new System.Drawing.Size(100, 20);
             this.imprintTextBox.TabIndex = 4;
@@ -112,6 +113,7 @@
             // 
             this.colorComboBox.FormattingEnabled = true;
             this.colorComboBox.Location = new System.Drawing.Point(109, 66);
+            this.colorComboBox.MaxLength = 15;
             this.colorComboBox.Name = "colorComboBox";
             this.colorComboBox.Size = new System.Drawing.Size(121, 21);
             this.colorComboBox.TabIndex = 5;
@@ -120,6 +122,7 @@
             // 
             this.shapeComboBox.FormattingEnabled = true;
             this.shapeComboBox.Location = new System.Drawing.Point(109, 106);
+            this.shapeComboBox.MaxLength = 15;
             this.shapeComboBox.Name = "shapeComboBox";
             this.shapeComboBox.Size = new System.Drawing.Size(121, 21);
             this.shapeComboBox.TabIndex = 6;
@@ -127,6 +130,7 @@
             // drugNameTextBox
             // 
             this.drugNameTextBox.Location = new System.Drawing.Point(109, 146);
+            this.drugNameTextBox.MaxLength = 75;
             this.drugNameTextBox.Name = "drugNameTextBox";
             this.drugNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.drugNameTextBox.TabIndex = 7;
@@ -134,6 +138,7 @@
             // drugStrengthTextBox
             // 
             this.drugStrengthTextBox.Location = new System.Drawing.Point(109, 186);
+            this.drugStrengthTextBox.MaxLength = 75;
             this.drugStrengthTextBox.Name = "drugStrengthTextBox";
             this.drugStrengthTextBox.Size = new System.Drawing.Size(100, 20);
             this.drugStrengthTextBox.TabIndex = 8;
@@ -168,6 +173,7 @@
             // selectImageTextBox
             // 
             this.selectImageTextBox.Location = new System.Drawing.Point(109, 266);
+            this.selectImageTextBox.MaxLength = 50;
             this.selectImageTextBox.Name = "selectImageTextBox";
             this.selectImageTextBox.Size = new System.Drawing.Size(226, 20);
             this.selectImageTextBox.TabIndex = 12;

@@ -18,6 +18,7 @@ using System.IO;
 * History:
 *           5/17/2020 - file created and form layout made. RRS
 *           5/18/2020 - connected file to the database and added all functionality. RRS
+*           5/18/2020 - added more input verification. RRS
 */
 
 namespace PillIdentifier
@@ -28,7 +29,6 @@ namespace PillIdentifier
         private PillForm pillForm; //reference to main pill form
         PillDB pillDB; //reference to pill database
 
-        //receives pillForm and stores it
         public AddPillForm(PillForm pillForm, ref PillDB pillDB)
         {
             InitializeComponent();
@@ -40,6 +40,7 @@ namespace PillIdentifier
             creationTimeDateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm:ss";
         }
 
+        //tries adding pill to database
         private void enterButton_Click(object sender, EventArgs e)
         {
 
@@ -65,16 +66,25 @@ namespace PillIdentifier
                     throw new ArgumentException("Color must not be empty");
                 }
 
+                else if (shape.Replace(" ", "") == "")
+                {
+                    throw new ArgumentException("Shape must not be empty");
+                }
+
                 else if (drugName.Replace(" ", "") == "")
                 {
                     throw new ArgumentException("Drug name must not be empty");
+                }
+
+                else if (drugStrength.Replace(" ", "") == "")
+                {
+                    throw new ArgumentException("Drug strength must not be empty");
                 }
                 
                 else if (photo.Replace(" ", "") == "")
                 {
                     throw new ArgumentException("photo must be selected");
                 }
-
 
                 //inserts the pill
                 IPill pill = new Pill(imprint, color, shape, drugName, drugStrength, photo, creationTime);
@@ -95,7 +105,7 @@ namespace PillIdentifier
 
         }
 
-        //shows the pillForm once the add form is closing
+        //shows the pillForm once the add form is to close
         private void addPillForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             pillForm.Show();
@@ -108,6 +118,7 @@ namespace PillIdentifier
             {
                 try
                 {
+                    //saves image filename
                     selectImageTextBox.Text = selectImageOpenFileDialog.SafeFileName;
                 }
 

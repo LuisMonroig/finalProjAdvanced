@@ -16,6 +16,7 @@ using MySql.Data.MySqlClient;
 *           5/14/2020 - File created. RRS
 *           5/17/2020 - added open and close connection functionality. RRS
 *           5/18/2020 - added select, update, and insert queries. RRS
+*           5/19/2020 - improved code readability. RRS
 */
 
 namespace PillIdentifier
@@ -104,13 +105,6 @@ namespace PillIdentifier
             IPill pill = new Pill(dataReader.GetString(0), dataReader.GetString(1), dataReader.GetString(2),
                 dataReader.GetString(3), dataReader.GetString(4), dataReader.GetString(5), dataReader.GetString(6));
 
-            //TODO: CHECK THAT THE METHOD ABOVE WORKS, DOWN HERE IS THE FALLBACK
-            /*
-                IPill pill = new Pill(dataReader.GetString(0) + "", dataReader["pill_color"] + "",
-                dataReader["pill_shape"] + "", dataReader["drug_name"] + "", dataReader["drug_strength"] + "", 
-                dataReader["creation_date"] + "");
-            */
-
             dataReader.Close();
 
             return pill;
@@ -119,6 +113,7 @@ namespace PillIdentifier
         //returns all pills from the database
         public List<IPill> SelectAllPills()
         {
+            //will hold data of al pills
             List<IPill> pills = new List<IPill>();
 
             string query = String.Format("SELECT * FROM pills");
@@ -126,6 +121,7 @@ namespace PillIdentifier
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader dataReader = command.ExecuteReader();
 
+            //reads information of each pill
             while(dataReader.Read())
             {
                 IPill pill = new Pill(dataReader.GetString(0), dataReader.GetString(1), dataReader.GetString(2),
@@ -140,7 +136,7 @@ namespace PillIdentifier
             return pills;
         }
 
-        //updates the data of a pill
+        //updates the data of a pill by its imprint
         public void UpdatePill(IPill pill, string pillOriginalImprint)
         {
             string query = String.Format("UPDATE pills SET pill_imprint='{0}', pill_color='{1}'," +

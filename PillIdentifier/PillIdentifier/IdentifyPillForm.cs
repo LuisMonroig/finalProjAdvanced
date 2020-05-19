@@ -14,6 +14,7 @@ using System.Windows.Forms;
 * Description: form used to show the information of a pill
 * History:
 *           5/18/2020 - file created, form layout made. Added all functionlity. RRS
+*           5/19/2020 - changed icon attributes to match database size limits. RRS
 */
 
 namespace PillIdentifier
@@ -29,6 +30,7 @@ namespace PillIdentifier
             this.pillForm = pillForm;
             this.pill = pill;
 
+            //adds pil information to form
             imprintTextBox.Text = pill.Imprint;
             colorTextBox.Text = pill.Color;
             shapeTextBox.Text = pill.Shape;

@@ -102,6 +102,7 @@
             // imprintTextBox
             // 
             this.imprintTextBox.Location = new System.Drawing.Point(109, 26);
+            this.imprintTextBox.MaxLength = 15;
             this.imprintTextBox.Name = "imprintTextBox";
             this.imprintTextBox.ReadOnly = true;
             this.imprintTextBox.Size = new System.Drawing.Size(100, 20);
@@ -110,6 +111,7 @@
             // colorTextBox
             // 
             this.colorTextBox.Location = new System.Drawing.Point(109, 66);
+            this.colorTextBox.MaxLength = 15;
             this.colorTextBox.Name = "colorTextBox";
             this.colorTextBox.ReadOnly = true;
             this.colorTextBox.Size = new System.Drawing.Size(100, 20);
@@ -118,6 +120,7 @@
             // shapeTextBox
             // 
             this.shapeTextBox.Location = new System.Drawing.Point(109, 106);
+            this.shapeTextBox.MaxLength = 15;
             this.shapeTextBox.Name = "shapeTextBox";
             this.shapeTextBox.ReadOnly = true;
             this.shapeTextBox.Size = new System.Drawing.Size(100, 20);
@@ -126,6 +129,7 @@
             // drugNameTextBox
             // 
             this.drugNameTextBox.Location = new System.Drawing.Point(109, 146);
+            this.drugNameTextBox.MaxLength = 75;
             this.drugNameTextBox.Name = "drugNameTextBox";
             this.drugNameTextBox.ReadOnly = true;
             this.drugNameTextBox.Size = new System.Drawing.Size(100, 20);
@@ -134,6 +138,7 @@
             // drugStrengthTextBox
             // 
             this.drugStrengthTextBox.Location = new System.Drawing.Point(109, 186);
+            this.drugStrengthTextBox.MaxLength = 75;
             this.drugStrengthTextBox.Name = "drugStrengthTextBox";
             this.drugStrengthTextBox.ReadOnly = true;
             this.drugStrengthTextBox.Size = new System.Drawing.Size(100, 20);
@@ -168,6 +173,7 @@
             // imageTextBox
             // 
             this.imageTextBox.Location = new System.Drawing.Point(109, 266);
+            this.imageTextBox.MaxLength = 50;
             this.imageTextBox.Name = "imageTextBox";
             this.imageTextBox.ReadOnly = true;
             this.imageTextBox.Size = new System.Drawing.Size(226, 20);

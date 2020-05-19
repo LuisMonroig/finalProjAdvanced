@@ -18,6 +18,7 @@ using MySql.Data.MySqlClient;
 *           5/10/2020 - File created. RRS
 *           5/12/2020 - login layout made. RRS
 *           5/17/2020 - added database functionality to login. RRS
+*           5/19/2020 - improved code readability. RRS
 */
 
 namespace PillIdentifier
@@ -35,6 +36,7 @@ namespace PillIdentifier
         //attempts login
         private void enterButton_Click(object sender, EventArgs e)
         {
+            //stores unsername and password to database
             pillDB.Username = usernameTextBox.Text;
             pillDB.Password = passwordTextBox.Text;
 
