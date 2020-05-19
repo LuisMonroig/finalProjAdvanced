@@ -121,7 +121,7 @@
     <value>Here, the information of all pills in the database can be viewed and highlighted as pleased.
 Cells can be expanded and shrinked as pleased.
 
-The help form can be left open whilst using the other features of the application.</value>
+To return to the main menu, close the form or click the close button.</value>
   </data>
   <data name="pillIdentifierSearchLabel.Text" xml:space="preserve">
     <value>A prompt with a search form will appear where the imprint of the pill can be entered and searched.
@@ -184,6 +184,9 @@ After adding, the user can go back to the main menu by closing the form</value>
 
 2. Help
 
-     about: shows informatin about the creators of the program </value>
+     about: shows informatin about the creators of the program 
+
+
+Note: The help form can be left open whilst using the other features of the application.</value>
   </data>
 </root>
