@@ -108,6 +108,7 @@ namespace PillIdentifier
                 //updates original pill imprint value, in case that imprint is modified again
                 pillOriginalImprint = pill.Imprint;
 
+                //update successful messagebox
                 MessageBox.Show("Pill updated successfully!", "Success", MessageBoxButtons.OK);
             }
 

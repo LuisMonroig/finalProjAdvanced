@@ -117,14 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="pillReportInfoLabel.Text" xml:space="preserve">
+    <value>Here, the information of all pills in the database can be viewed and highlighted as pleased.
+Cells can be expanded and shrinked as pleased.
+
+The help form can be left open whilst using the other features of the application.</value>
+  </data>
   <data name="pillIdentifierSearchLabel.Text" xml:space="preserve">
-    <value>The user will be prompted with a search form where they will enter the imprint of the pill they wish to view the information of.
+    <value>A prompt with a search form will appear where the imprint of the pill can be entered and searched.
+
 If the imprint is found, the pill information will immediately be shown. 
 If the imprint is not found, an error will be shown.</value>
   </data>
   <data name="modifyPillInfoLabel.Text" xml:space="preserve">
     <value>the modify form pill uses the same rules as the add pill form.
-No field must be left in blank and the character limits are as follow:
+
+No field must be left in blank.
 
 character limits for each field:
 
@@ -135,13 +143,16 @@ character limits for each field:
 75 characters - drug strength
 50 characters - image filename 
 
+a messagebox will appear once the changes have been saved.
 
-After modifying, the user can return to the main menu by closing the form.</value>
+To return to the main menu, close the form.</value>
   </data>
   <data name="modifyPillSearchLabel.Text" xml:space="preserve">
-    <value>to be able to modify a pill, the user must search for the pill they wish to modify via its pill imprint.
-Clicking on search will search for the pill and will display the modify pill form if the imprint is found.
-If the imprint is not found, an error will be shown.</value>
+    <value>A prompt with a search form will appear where the imprint of the pill can be entered and searched.
+
+If the imprint is found, the modify pill form will immediately be shown. 
+If the imprint is not found, an error will be shown.
+</value>
   </data>
   <data name="addPillInfoLabel.Text" xml:space="preserve">
     <value>the add pill form displays all the information of a pill that must be entered before it can be entered into the database.
@@ -159,7 +170,7 @@ character limits for each field:
 After adding, the user can go back to the main menu by closing the form</value>
   </data>
   <data name="mainMenuInfoLabel.Text" xml:space="preserve">
-    <value>The main menu consists of the following items:
+    <value>The main menu consists of the following menu items:
 
 1. File
 

@@ -90,6 +90,7 @@ namespace PillIdentifier
                 IPill pill = new Pill(imprint, color, shape, drugName, drugStrength, photo, creationTime);
                 pillDB.InsertPill(pill);
 
+                //addition successful messagebox
                 MessageBox.Show("Pill added successfully!", "Success", MessageBoxButtons.OK);
             }
 

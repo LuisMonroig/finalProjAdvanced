@@ -157,7 +157,7 @@
             this.modifyPillSearchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modifyPillSearchLabel.Location = new System.Drawing.Point(12, 2750);
             this.modifyPillSearchLabel.Name = "modifyPillSearchLabel";
-            this.modifyPillSearchLabel.Size = new System.Drawing.Size(572, 48);
+            this.modifyPillSearchLabel.Size = new System.Drawing.Size(578, 64);
             this.modifyPillSearchLabel.TabIndex = 10;
             this.modifyPillSearchLabel.Text = resources.GetString("modifyPillSearchLabel.Text");
             // 
@@ -167,7 +167,7 @@
             this.modifyPillInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modifyPillInfoLabel.Location = new System.Drawing.Point(12, 3294);
             this.modifyPillInfoLabel.Name = "modifyPillInfoLabel";
-            this.modifyPillInfoLabel.Size = new System.Drawing.Size(430, 224);
+            this.modifyPillInfoLabel.Size = new System.Drawing.Size(386, 256);
             this.modifyPillInfoLabel.TabIndex = 12;
             this.modifyPillInfoLabel.Text = resources.GetString("modifyPillInfoLabel.Text");
             // 
@@ -187,7 +187,7 @@
             this.pillIdentifierSearchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pillIdentifierSearchLabel.Location = new System.Drawing.Point(12, 4232);
             this.pillIdentifierSearchLabel.Name = "pillIdentifierSearchLabel";
-            this.pillIdentifierSearchLabel.Size = new System.Drawing.Size(717, 48);
+            this.pillIdentifierSearchLabel.Size = new System.Drawing.Size(578, 64);
             this.pillIdentifierSearchLabel.TabIndex = 15;
             this.pillIdentifierSearchLabel.Text = resources.GetString("pillIdentifierSearchLabel.Text");
             // 
@@ -197,11 +197,10 @@
             this.pillIdentifierInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pillIdentifierInfoLabel.Location = new System.Drawing.Point(12, 4879);
             this.pillIdentifierInfoLabel.Name = "pillIdentifierInfoLabel";
-            this.pillIdentifierInfoLabel.Size = new System.Drawing.Size(555, 48);
+            this.pillIdentifierInfoLabel.Size = new System.Drawing.Size(397, 48);
             this.pillIdentifierInfoLabel.TabIndex = 17;
-            this.pillIdentifierInfoLabel.Text = "The user can view all information of the pill but cannot modify it.\r\n\r\nThe user c" +
-    "an return to the main menu by either clicking the close button or by closing the" +
-    " form.";
+            this.pillIdentifierInfoLabel.Text = "All information of the pill can be viewed but cannot be modified.\r\n\r\nTo return to" +
+    " the main menu, close the form or click the close button.";
             // 
             // pillReportSectionLabel
             // 
@@ -289,12 +288,12 @@
             // pillReportInfoLabel
             // 
             this.pillReportInfoLabel.AutoSize = true;
+            this.pillReportInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pillReportInfoLabel.Location = new System.Drawing.Point(12, 5636);
             this.pillReportInfoLabel.Name = "pillReportInfoLabel";
-            this.pillReportInfoLabel.Size = new System.Drawing.Size(431, 26);
+            this.pillReportInfoLabel.Size = new System.Drawing.Size(541, 64);
             this.pillReportInfoLabel.TabIndex = 20;
-            this.pillReportInfoLabel.Text = "Here, the information of all pills in the database can be viewed and highlighted " +
-    "as pleased.\r\nTo return to the main menu, close the form.";
+            this.pillReportInfoLabel.Text = resources.GetString("pillReportInfoLabel.Text");
             // 
             // HelpForm
             // 
