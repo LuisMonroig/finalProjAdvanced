@@ -53,11 +53,13 @@ namespace PillIdentifier
             connection.Open();
         }
 
+        //closes connection to the database
         public void CloseConneciton()
         {
             connection.Close();
         }
 
+        //inserts a pill into the database
         public void InsertPill(IPill pill)
         { 
             //insert query
@@ -70,6 +72,7 @@ namespace PillIdentifier
             command.ExecuteNonQuery();
         }
 
+        //inserts a pill into the database
         public void InsertPill(string imprint, string color, string shape, string drugName, string drugStrength, string photo, string creationTimestamp)
         {
 
@@ -82,6 +85,7 @@ namespace PillIdentifier
             command.ExecuteNonQuery();
         }
 
+        //selects a pill from the database
         public IPill SelectPill(string imprint)
         {
             string query = String.Format("SELECT * FROM pills WHERE pill_imprint = '{0}'", imprint);
@@ -112,6 +116,7 @@ namespace PillIdentifier
             return pill;
         }
         
+        //returns all pills from the database
         public List<IPill> SelectAllPills()
         {
             List<IPill> pills = new List<IPill>();
@@ -135,6 +140,7 @@ namespace PillIdentifier
             return pills;
         }
 
+        //updates the data of a pill
         public void UpdatePill(IPill pill, string pillOriginalImprint)
         {
             string query = String.Format("UPDATE pills SET pill_imprint='{0}', pill_color='{1}'," +

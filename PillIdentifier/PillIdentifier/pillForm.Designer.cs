@@ -69,35 +69,35 @@
             // addPillToolStripMenuItem
             // 
             this.addPillToolStripMenuItem.Name = "addPillToolStripMenuItem";
-            this.addPillToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addPillToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.addPillToolStripMenuItem.Text = "Add Pill";
             this.addPillToolStripMenuItem.Click += new System.EventHandler(this.addPillToolStripMenuItem_Click);
             // 
             // modifyPillToolStripMenuItem
             // 
             this.modifyPillToolStripMenuItem.Name = "modifyPillToolStripMenuItem";
-            this.modifyPillToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modifyPillToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.modifyPillToolStripMenuItem.Text = "Modify Pill";
             this.modifyPillToolStripMenuItem.Click += new System.EventHandler(this.modifyPillToolStripMenuItem_Click);
             // 
             // IdentifyPillToolStripMenuItem
             // 
             this.IdentifyPillToolStripMenuItem.Name = "IdentifyPillToolStripMenuItem";
-            this.IdentifyPillToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.IdentifyPillToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.IdentifyPillToolStripMenuItem.Text = "Pill Identifier";
             this.IdentifyPillToolStripMenuItem.Click += new System.EventHandler(this.IdentifyPillToolStripMenuItem_Click);
             // 
             // pillReportToolStripMenuItem
             // 
             this.pillReportToolStripMenuItem.Name = "pillReportToolStripMenuItem";
-            this.pillReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pillReportToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.pillReportToolStripMenuItem.Text = "Pill Report";
             this.pillReportToolStripMenuItem.Click += new System.EventHandler(this.pillReportToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -115,6 +115,7 @@
             this.helpContentsToolStripMenuItem.Name = "helpContentsToolStripMenuItem";
             this.helpContentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.helpContentsToolStripMenuItem.Text = "Help Contents";
+            this.helpContentsToolStripMenuItem.Click += new System.EventHandler(this.helpContentsToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -127,21 +128,21 @@
             // 
             this.welcomeLabel.AutoSize = true;
             this.welcomeLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.Location = new System.Drawing.Point(112, 161);
+            this.welcomeLabel.Location = new System.Drawing.Point(130, 161);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(543, 45);
+            this.welcomeLabel.Size = new System.Drawing.Size(542, 45);
             this.welcomeLabel.TabIndex = 1;
-            this.welcomeLabel.Text = "Welcome to the Pill Identifier App";
+            this.welcomeLabel.Text = "Welcome to the Pill identifier App";
             // 
             // informationLabel
             // 
             this.informationLabel.AutoSize = true;
             this.informationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.informationLabel.Location = new System.Drawing.Point(214, 206);
+            this.informationLabel.Location = new System.Drawing.Point(246, 206);
             this.informationLabel.Name = "informationLabel";
-            this.informationLabel.Size = new System.Drawing.Size(328, 15);
+            this.informationLabel.Size = new System.Drawing.Size(331, 15);
             this.informationLabel.TabIndex = 2;
-            this.informationLabel.Text = "add, modify, and find the pills you need inside the database";
+            this.informationLabel.Text = "add, modify, and find the pills you need, inside the database";
             // 
             // PillForm
             // 

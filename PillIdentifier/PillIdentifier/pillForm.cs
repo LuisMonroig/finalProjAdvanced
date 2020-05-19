@@ -23,13 +23,14 @@ namespace PillIdentifier
     public partial class PillForm : Form
     {
 
-        private PillDB pillDB;
+        private PillDB pillDB; //pill database instance
         public PillForm(ref PillDB pillDB)
         {
             InitializeComponent();
             this.pillDB = pillDB;
         }
 
+        //messagebox with author information
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string infoMessage = "Made by:\n" +
@@ -39,6 +40,7 @@ namespace PillIdentifier
             MessageBox.Show(infoMessage, "About", MessageBoxButtons.OK);
         }
 
+        //shows form to add a pill
         private void addPillToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddPillForm addForm = new AddPillForm(this, ref pillDB);
@@ -52,12 +54,14 @@ namespace PillIdentifier
             Application.Exit();
         }
 
+        //prepares search form to search for the pill to use in the modify pill form
         private void modifyPillToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SearchPillForm searchForm = new SearchPillForm(this, ref pillDB, SearchType.SearchAndModify);
             searchForm.Show();
         }
 
+        //prepares search form to search for the pill to use in the identify pill form
         private void IdentifyPillToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SearchPillForm searchForm = new SearchPillForm(this, ref pillDB, SearchType.SearchAndIdentify);
@@ -69,11 +73,19 @@ namespace PillIdentifier
             Application.Exit();
         }
 
+        //shows pill report form
         private void pillReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PillReportForm reportForm = new PillReportForm(this,ref pillDB);
             reportForm.Show();
             this.Hide();
+        }
+
+        //shows the help information for the app
+        private void helpContentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpForm helpForm = new HelpForm();
+            helpForm.Show();
         }
     }
 }

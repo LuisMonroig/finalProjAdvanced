@@ -22,8 +22,8 @@ namespace PillIdentifier
 {
     public partial class ModifyPillForm : Form
     {
-        private PillForm pillForm; //reference to pillForm
-        private PillDB pillDB;
+        private PillForm pillForm; //reference to main pill form
+        private PillDB pillDB; //reference to pill database
         IPill pill;
         string pillOriginalImprint;
 

@@ -66,15 +66,15 @@
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // searchPillForm
+            // SearchPillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 94);
+            this.ClientSize = new System.Drawing.Size(348, 89);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.pillImprintTextBox);
             this.Controls.Add(this.pillImprintLabel);
-            this.Name = "searchPillForm";
+            this.Name = "SearchPillForm";
             this.Text = "searchPillForm";
             this.ResumeLayout(false);
             this.PerformLayout();

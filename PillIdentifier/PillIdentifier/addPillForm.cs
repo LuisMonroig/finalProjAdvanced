@@ -25,8 +25,8 @@ namespace PillIdentifier
     public partial class AddPillForm : Form
     {
 
-        private PillForm pillForm; //reference to pillForm
-        PillDB pillDB; //reference to pillDB
+        private PillForm pillForm; //reference to main pill form
+        PillDB pillDB; //reference to pill database
 
         //receives pillForm and stores it
         public AddPillForm(PillForm pillForm, ref PillDB pillDB)

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pillDataGridView = new System.Windows.Forms.DataGridView();
             this.imprintColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +43,8 @@
             // pillDataGridView
             // 
             this.pillDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pillDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.pillDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pillDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.imprintColumn,
@@ -51,10 +54,10 @@
             this.drugStrengthColumn,
             this.pillPhoto,
             this.creationTimeColumn});
-            this.pillDataGridView.Location = new System.Drawing.Point(13, 13);
+            this.pillDataGridView.Location = new System.Drawing.Point(12, 12);
             this.pillDataGridView.Name = "pillDataGridView";
             this.pillDataGridView.ReadOnly = true;
-            this.pillDataGridView.Size = new System.Drawing.Size(744, 382);
+            this.pillDataGridView.Size = new System.Drawing.Size(813, 383);
             this.pillDataGridView.TabIndex = 0;
             // 
             // imprintColumn
@@ -80,6 +83,7 @@
             this.drugNameColumn.HeaderText = "Drug Name";
             this.drugNameColumn.Name = "drugNameColumn";
             this.drugNameColumn.ReadOnly = true;
+            this.drugNameColumn.Width = 110;
             // 
             // drugStrengthColumn
             // 
@@ -92,18 +96,20 @@
             this.pillPhoto.HeaderText = "Photo";
             this.pillPhoto.Name = "pillPhoto";
             this.pillPhoto.ReadOnly = true;
+            this.pillPhoto.Width = 110;
             // 
             // creationTimeColumn
             // 
             this.creationTimeColumn.HeaderText = "Creation Time";
             this.creationTimeColumn.Name = "creationTimeColumn";
             this.creationTimeColumn.ReadOnly = true;
+            this.creationTimeColumn.Width = 150;
             // 
             // PillReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 407);
+            this.ClientSize = new System.Drawing.Size(837, 407);
             this.Controls.Add(this.pillDataGridView);
             this.Name = "PillReportForm";
             this.Text = "pillReportForm";

@@ -48,7 +48,7 @@
             // imprintLabel
             // 
             this.imprintLabel.AutoSize = true;
-            this.imprintLabel.Location = new System.Drawing.Point(59, 35);
+            this.imprintLabel.Location = new System.Drawing.Point(56, 26);
             this.imprintLabel.Name = "imprintLabel";
             this.imprintLabel.Size = new System.Drawing.Size(40, 13);
             this.imprintLabel.TabIndex = 0;
@@ -57,7 +57,7 @@
             // colorLabel
             // 
             this.colorLabel.AutoSize = true;
-            this.colorLabel.Location = new System.Drawing.Point(59, 71);
+            this.colorLabel.Location = new System.Drawing.Point(63, 66);
             this.colorLabel.Name = "colorLabel";
             this.colorLabel.Size = new System.Drawing.Size(33, 13);
             this.colorLabel.TabIndex = 0;
@@ -66,7 +66,7 @@
             // shapeLabel
             // 
             this.shapeLabel.AutoSize = true;
-            this.shapeLabel.Location = new System.Drawing.Point(59, 110);
+            this.shapeLabel.Location = new System.Drawing.Point(57, 106);
             this.shapeLabel.Name = "shapeLabel";
             this.shapeLabel.Size = new System.Drawing.Size(39, 13);
             this.shapeLabel.TabIndex = 0;
@@ -75,7 +75,7 @@
             // drugNameLabel
             // 
             this.drugNameLabel.AutoSize = true;
-            this.drugNameLabel.Location = new System.Drawing.Point(53, 149);
+            this.drugNameLabel.Location = new System.Drawing.Point(36, 146);
             this.drugNameLabel.Name = "drugNameLabel";
             this.drugNameLabel.Size = new System.Drawing.Size(60, 13);
             this.drugNameLabel.TabIndex = 0;
@@ -84,7 +84,7 @@
             // drugStrengthLabel
             // 
             this.drugStrengthLabel.AutoSize = true;
-            this.drugStrengthLabel.Location = new System.Drawing.Point(53, 187);
+            this.drugStrengthLabel.Location = new System.Drawing.Point(24, 186);
             this.drugStrengthLabel.Name = "drugStrengthLabel";
             this.drugStrengthLabel.Size = new System.Drawing.Size(72, 13);
             this.drugStrengthLabel.TabIndex = 0;
@@ -93,7 +93,7 @@
             // creationTimeLabel
             // 
             this.creationTimeLabel.AutoSize = true;
-            this.creationTimeLabel.Location = new System.Drawing.Point(53, 227);
+            this.creationTimeLabel.Location = new System.Drawing.Point(26, 226);
             this.creationTimeLabel.Name = "creationTimeLabel";
             this.creationTimeLabel.Size = new System.Drawing.Size(70, 13);
             this.creationTimeLabel.TabIndex = 0;
@@ -101,7 +101,7 @@
             // 
             // imprintTextBox
             // 
-            this.imprintTextBox.Location = new System.Drawing.Point(181, 32);
+            this.imprintTextBox.Location = new System.Drawing.Point(109, 26);
             this.imprintTextBox.Name = "imprintTextBox";
             this.imprintTextBox.ReadOnly = true;
             this.imprintTextBox.Size = new System.Drawing.Size(100, 20);
@@ -109,7 +109,7 @@
             // 
             // colorTextBox
             // 
-            this.colorTextBox.Location = new System.Drawing.Point(181, 68);
+            this.colorTextBox.Location = new System.Drawing.Point(109, 66);
             this.colorTextBox.Name = "colorTextBox";
             this.colorTextBox.ReadOnly = true;
             this.colorTextBox.Size = new System.Drawing.Size(100, 20);
@@ -117,7 +117,7 @@
             // 
             // shapeTextBox
             // 
-            this.shapeTextBox.Location = new System.Drawing.Point(181, 103);
+            this.shapeTextBox.Location = new System.Drawing.Point(109, 106);
             this.shapeTextBox.Name = "shapeTextBox";
             this.shapeTextBox.ReadOnly = true;
             this.shapeTextBox.Size = new System.Drawing.Size(100, 20);
@@ -125,7 +125,7 @@
             // 
             // drugNameTextBox
             // 
-            this.drugNameTextBox.Location = new System.Drawing.Point(181, 146);
+            this.drugNameTextBox.Location = new System.Drawing.Point(109, 146);
             this.drugNameTextBox.Name = "drugNameTextBox";
             this.drugNameTextBox.ReadOnly = true;
             this.drugNameTextBox.Size = new System.Drawing.Size(100, 20);
@@ -133,7 +133,7 @@
             // 
             // drugStrengthTextBox
             // 
-            this.drugStrengthTextBox.Location = new System.Drawing.Point(181, 184);
+            this.drugStrengthTextBox.Location = new System.Drawing.Point(109, 186);
             this.drugStrengthTextBox.Name = "drugStrengthTextBox";
             this.drugStrengthTextBox.ReadOnly = true;
             this.drugStrengthTextBox.Size = new System.Drawing.Size(100, 20);
@@ -141,14 +141,14 @@
             // 
             // creationTimeDateTimePicker
             // 
-            this.creationTimeDateTimePicker.Location = new System.Drawing.Point(181, 219);
+            this.creationTimeDateTimePicker.Location = new System.Drawing.Point(109, 226);
             this.creationTimeDateTimePicker.Name = "creationTimeDateTimePicker";
             this.creationTimeDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.creationTimeDateTimePicker.TabIndex = 2;
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(306, 312);
+            this.closeButton.Location = new System.Drawing.Point(341, 306);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 3;
@@ -159,25 +159,25 @@
             // imageLabel
             // 
             this.imageLabel.AutoSize = true;
-            this.imageLabel.Location = new System.Drawing.Point(53, 265);
+            this.imageLabel.Location = new System.Drawing.Point(58, 266);
             this.imageLabel.Name = "imageLabel";
-            this.imageLabel.Size = new System.Drawing.Size(54, 13);
+            this.imageLabel.Size = new System.Drawing.Size(38, 13);
             this.imageLabel.TabIndex = 0;
-            this.imageLabel.Text = "image file:";
+            this.imageLabel.Text = "image:";
             // 
             // imageTextBox
             // 
-            this.imageTextBox.Location = new System.Drawing.Point(181, 257);
+            this.imageTextBox.Location = new System.Drawing.Point(109, 266);
             this.imageTextBox.Name = "imageTextBox";
             this.imageTextBox.ReadOnly = true;
-            this.imageTextBox.Size = new System.Drawing.Size(200, 20);
+            this.imageTextBox.Size = new System.Drawing.Size(226, 20);
             this.imageTextBox.TabIndex = 4;
             // 
             // IdentifyPillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 347);
+            this.ClientSize = new System.Drawing.Size(444, 356);
             this.Controls.Add(this.imageTextBox);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.creationTimeDateTimePicker);

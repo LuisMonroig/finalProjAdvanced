@@ -24,7 +24,7 @@ namespace PillIdentifier
 {
     public partial class LoginForm : Form
     {
-        PillDB pillDB;
+        PillDB pillDB; //pill database
 
         public LoginForm()
         {
@@ -32,6 +32,7 @@ namespace PillIdentifier
             pillDB = new PillDB();
         }
 
+        //attempts login
         private void enterButton_Click(object sender, EventArgs e)
         {
             pillDB.Username = usernameTextBox.Text;
@@ -39,7 +40,7 @@ namespace PillIdentifier
 
             try
             {
-                pillDB.OpenConnection();
+                pillDB.OpenConnection(); //will fail if login information is incorrect
                 correctLogin();
             }
 
@@ -50,19 +51,20 @@ namespace PillIdentifier
 
             catch (MySqlException except)
             {
+                //mysql exceptions give a number that indicate the error that occured
                 int exceptNum;
 
+                //catches error number if the error was an inner error
                 if (except.InnerException is MySqlException)
                 {
                     exceptNum = ((MySqlException)except.InnerException).Number;
                 }
-
                 else
                 {
                     exceptNum = except.Number;
                 }
 
-                //gives the type of error that occrued
+                //selects the mysql error that occured
                 switch (exceptNum)
                 {
                     //connection to the server failed
@@ -75,6 +77,10 @@ namespace PillIdentifier
                     case 1045:
                         MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
+
+                    default:
+                        MessageBox.Show("unrecognized MySql error occured", "Unrecognized Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
                 }
             }
 
@@ -84,6 +90,7 @@ namespace PillIdentifier
             }
         }
 
+        //login correct, proceeds to main app form
         private void correctLogin()
         {
             //opens the main application 
