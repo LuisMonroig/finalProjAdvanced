@@ -57,6 +57,7 @@ namespace PillIdentifier
             pillForm.Show();
         }
 
+        //modifies pill values
         private void enterButton_Click(object sender, EventArgs e)
         {
             try

@@ -48,7 +48,7 @@ namespace PillIdentifier
                 string imprint = pillImprintTextBox.Text;
                 pill = pillDB.SelectPill(imprint); //returns pill from database
 
-                pillFound();
+                PillFound();
             }
 
             catch (InvalidDataException except)
@@ -63,7 +63,7 @@ namespace PillIdentifier
         }
 
         //contniues to corresponding form (identify a pill or modify a pill) once pill is found
-        private void pillFound()
+        private void PillFound()
         {
             //goes to identify form
             if (searchType == SearchType.SearchAndIdentify)

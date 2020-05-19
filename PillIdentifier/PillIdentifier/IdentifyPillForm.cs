@@ -37,6 +37,10 @@ namespace PillIdentifier
             drugNameTextBox.Text = pill.DrugName;
             drugStrengthTextBox.Text = pill.DrugStrength;
             imageTextBox.Text = pill.Photo;
+
+            //allows for date time picker to accept both date and time
+            creationTimeDateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+
             creationTimeDateTimePicker.Value = DateTime.Parse(pill.CreationTimestamp);
 
             //trick to make the date time picker unchangable

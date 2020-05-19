@@ -112,6 +112,17 @@
             // colorComboBox
             // 
             this.colorComboBox.FormattingEnabled = true;
+            this.colorComboBox.Items.AddRange(new object[] {
+            "Black",
+            "Blue",
+            "Green",
+            "Multicolor",
+            "Orange",
+            "Pink",
+            "Purple",
+            "Red",
+            "White",
+            "Yellow"});
             this.colorComboBox.Location = new System.Drawing.Point(109, 66);
             this.colorComboBox.MaxLength = 15;
             this.colorComboBox.Name = "colorComboBox";
@@ -121,10 +132,17 @@
             // shapeComboBox
             // 
             this.shapeComboBox.FormattingEnabled = true;
+            this.shapeComboBox.Items.AddRange(new object[] {
+            "Oblong",
+            "Oval",
+            "Rectangle",
+            "Round",
+            "Square"});
             this.shapeComboBox.Location = new System.Drawing.Point(109, 106);
             this.shapeComboBox.MaxLength = 15;
             this.shapeComboBox.Name = "shapeComboBox";
             this.shapeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.shapeComboBox.Sorted = true;
             this.shapeComboBox.TabIndex = 6;
             // 
             // drugNameTextBox
@@ -214,7 +232,7 @@
             this.Controls.Add(this.colorLabel);
             this.Controls.Add(this.imprintLabel);
             this.Name = "ModifyPillForm";
-            this.Text = "modifyPillForm";
+            this.Text = "Modify Pill";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.modifyPillForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

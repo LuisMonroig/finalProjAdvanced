@@ -14,6 +14,7 @@ using System.Windows.Forms;
 * Description: describes how to use the app
 * History:
 *           5/18/2020 - Form created. RRS
+*           5/19/2020 - added help content for file menu options. RRS
 */
 
 namespace PillIdentifier
@@ -23,6 +24,11 @@ namespace PillIdentifier
         public HelpForm()
         {
             InitializeComponent();
+        }
+
+        private void HelpForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

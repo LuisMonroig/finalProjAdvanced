@@ -104,6 +104,9 @@
     <EmbeddedResource Include="AddPillForm.resx">
       <DependentUpon>AddPillForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IdentifyPillForm.resx">
       <DependentUpon>IdentifyPillForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SearchPillForm.resx">
       <DependentUpon>SearchPillForm.cs</DependentUpon>
@@ -143,6 +147,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add pill empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add pill filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify pill search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modify pill editing form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill identify search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill identify info form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill report.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

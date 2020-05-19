@@ -75,7 +75,7 @@
             this.Controls.Add(this.pillImprintTextBox);
             this.Controls.Add(this.pillImprintLabel);
             this.Name = "SearchPillForm";
-            this.Text = "searchPillForm";
+            this.Text = "Search";
             this.ResumeLayout(false);
             this.PerformLayout();
 

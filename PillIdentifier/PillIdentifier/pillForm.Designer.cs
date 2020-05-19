@@ -113,14 +113,14 @@
             // helpContentsToolStripMenuItem
             // 
             this.helpContentsToolStripMenuItem.Name = "helpContentsToolStripMenuItem";
-            this.helpContentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpContentsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.helpContentsToolStripMenuItem.Text = "Help Contents";
             this.helpContentsToolStripMenuItem.Click += new System.EventHandler(this.helpContentsToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -154,7 +154,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PillForm";
-            this.Text = "pillForm";
+            this.Text = "Main Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PillForm_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

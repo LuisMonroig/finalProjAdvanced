@@ -112,7 +112,7 @@
             this.ClientSize = new System.Drawing.Size(837, 407);
             this.Controls.Add(this.pillDataGridView);
             this.Name = "PillReportForm";
-            this.Text = "pillReportForm";
+            this.Text = "Pill Report";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.pillReportForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pillDataGridView)).EndInit();
             this.ResumeLayout(false);

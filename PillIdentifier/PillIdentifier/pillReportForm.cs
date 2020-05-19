@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,14 +39,27 @@ namespace PillIdentifier
         //adds all the pills to the data grid view
         private void InitializePillDataGridView()
         {
-            //holds information of all pills in the database
-            List<IPill> pills = pillDB.SelectAllPills();
-
-            //outputs information of each pill to the data grid view
-            foreach (IPill pill in pills)
+            try
             {
-                pillDataGridView.Rows.Add(pill.Imprint, pill.Color, pill.Shape, pill.DrugName,
-                    pill.DrugStrength, pill.Photo, pill.CreationTimestamp);
+                //holds information of all pills in the database
+                List<IPill> pills = pillDB.SelectAllPills();
+
+                //outputs information of each pill to the data grid view
+                foreach (IPill pill in pills)
+                {
+                    pillDataGridView.Rows.Add(pill.Imprint, pill.Color, pill.Shape, pill.DrugName,
+                        pill.DrugStrength, pill.Photo, pill.CreationTimestamp);
+                }
+            }
+
+            catch (SqlNullValueException except)
+            {
+                MessageBox.Show(except.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            catch (Exception except)
+            {
+                MessageBox.Show(except.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

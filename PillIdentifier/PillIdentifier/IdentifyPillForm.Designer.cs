@@ -146,6 +146,7 @@
             // 
             // creationTimeDateTimePicker
             // 
+            this.creationTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.creationTimeDateTimePicker.Location = new System.Drawing.Point(109, 226);
             this.creationTimeDateTimePicker.Name = "creationTimeDateTimePicker";
             this.creationTimeDateTimePicker.Size = new System.Drawing.Size(200, 20);
@@ -200,7 +201,7 @@
             this.Controls.Add(this.colorLabel);
             this.Controls.Add(this.imprintLabel);
             this.Name = "IdentifyPillForm";
-            this.Text = "IdentifyPillForm";
+            this.Text = "Identify Pill";
             this.ResumeLayout(false);
             this.PerformLayout();
 

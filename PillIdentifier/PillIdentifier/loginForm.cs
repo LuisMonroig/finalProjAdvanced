@@ -43,7 +43,7 @@ namespace PillIdentifier
             try
             {
                 pillDB.OpenConnection(); //will fail if login information is incorrect
-                correctLogin();
+                CorrectLogin();
             }
 
             catch (ApplicationException except)
@@ -93,7 +93,7 @@ namespace PillIdentifier
         }
 
         //login correct, proceeds to main app form
-        private void correctLogin()
+        private void CorrectLogin()
         {
             //opens the main application 
             PillForm pillForm = new PillForm(ref pillDB);

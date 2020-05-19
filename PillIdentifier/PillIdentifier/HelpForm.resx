@@ -117,29 +117,62 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="main menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pillIdentifierSearchLabel.Text" xml:space="preserve">
+    <value>The user will be prompted with a search form where they will enter the imprint of the pill they wish to view the information of.
+If the imprint is found, the pill information will immediately be shown. 
+If the imprint is not found, an error will be shown.</value>
   </data>
-  <data name="add pill empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add pill empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="modifyPillInfoLabel.Text" xml:space="preserve">
+    <value>the modify form pill uses the same rules as the add pill form.
+No field must be left in blank and the character limits are as follow:
+
+character limits for each field:
+
+15 characters - imprint
+15 characters - color
+15 characters - shape
+75 characters - drug name
+75 characters - drug strength
+50 characters - image filename 
+
+
+After modifying, the user can return to the main menu by closing the form.</value>
   </data>
-  <data name="add pill filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add pill filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="modifyPillSearchLabel.Text" xml:space="preserve">
+    <value>to be able to modify a pill, the user must search for the pill they wish to modify via its pill imprint.
+Clicking on search will search for the pill and will display the modify pill form if the imprint is found.
+If the imprint is not found, an error will be shown.</value>
   </data>
-  <data name="pill identify info form" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pill identify info form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="addPillInfoLabel.Text" xml:space="preserve">
+    <value>the add pill form displays all the information of a pill that must be entered before it can be entered into the database.
+Each box must be filled out, and an image of the pill must be selected by clicking on the select button.
+
+character limits for each field:
+
+15 characters - imprint
+15 characters - color
+15 characters - shape
+75 characters - drug name
+75 characters - drug strength
+50 characters - image filename 
+
+After adding, the user can go back to the main menu by closing the form</value>
   </data>
-  <data name="modify pill editing form" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\modify pill editing form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pill identify search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pill identify search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="modify pill search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\modify pill search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pill report" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pill report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mainMenuInfoLabel.Text" xml:space="preserve">
+    <value>The main menu consists of the following items:
+
+1. File
+
+     add pill: allows user to add a pill into the pill databaes
+
+     modify pill: allows user to modify the data of a pill in the databae
+
+     pill identifier: shows the information of a pill
+
+     pill report: shows a table with all the pill inside the databae
+
+2. Help
+
+     about: shows informatin about the creators of the program </value>
   </data>
 </root>
