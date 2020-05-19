@@ -40,7 +40,6 @@ namespace PillIdentifier
             this.Password = "";
         }
 
-        //TODO: add connection already open check
         //opens a connection to the database
         public void OpenConnection()
         {
